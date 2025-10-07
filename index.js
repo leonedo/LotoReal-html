@@ -377,7 +377,7 @@ webcg.on('stop', function () {
             isOn = false
         }
 
-        if (loopExits && loopExternal && externalLoop.isPaused) {
+        if (loopExits && loopExternal) {
             externalLoop.goToAndPlay('stop', true);
             anim.goToAndPlay('stop', true)
             isOn = false
