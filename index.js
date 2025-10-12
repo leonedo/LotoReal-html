@@ -192,8 +192,8 @@ const animPromise = makeAnimPromise()
 webcg.on('data', function (data) {
     let updateTiming = 0
     console.log('data from casparcg received')
+    console.log(JSON.stringify(data, null, 2));
     for (var key in data) {
-    console.log(key + " = " + data[key]);
     if (key.includes("Color")) {
         checkandcolor(key, data[key]);
     }
@@ -319,28 +319,25 @@ function update_opacidad(campo,value){
     document.querySelector(fill).style.setProperty("opacity", value);
 }
 
+function normalizeValue(v) {
+    return (typeof v === "object" && v !== null && "text" in v) ? v.text : v;
+} 
 
-function checkandupdate(item, value){
-    if (itemExists(item)){
-        console.log(`checkandupdate: ${item} -- exist`)
-        update_opacidad(item,value)
+function checkandcolor(item, colorData) {
+    const color = normalizeValue(colorData);
+    if (itemExists(item)) {
+        update_color(item, color);
     } else {
-        console.log(`checkandupdate: ${item} --- waiting`)
-        setTimeout(function(){
-            checkandupdate(item,value);
-        }, 100);
+        setTimeout(() => checkandcolor(item, colorData), 100);
     }
 }
 
-function checkandcolor(item, color){
-    if (itemExists(item)){
-        console.log(`checkandcolor: ${item} -- exist`)
-        update_color(item,color);
+function checkandupdate(item, valueData) {
+    const value = normalizeValue(valueData);
+    if (itemExists(item)) {
+        update_opacidad(item, value);
     } else {
-        console.log(`checkandcolor: ${item} --- waiting`)
-        setTimeout(function(){
-            checkandcolor(item, color);
-        }, 100);
+        setTimeout(() => checkandupdate(item, valueData), 100);
     }
 }
 function itemExists(item) {
