@@ -3573,7 +3573,8 @@
           },
           "r": 1,
           "bm": 0,
-          "nm": "Fill 1",
+          "nm": ".bola1Color",
+          "cl": "bola1Color",
           "mn": "ADBE Vector Graphic - Fill",
           "hd": false
         }
@@ -3680,7 +3681,8 @@
           },
           "r": 1,
           "bm": 0,
-          "nm": "Fill 1",
+          "nm": ".bola2Color",
+          "cl": "bola2Color",
           "mn": "ADBE Vector Graphic - Fill",
           "hd": false
         }
@@ -3787,7 +3789,8 @@
           },
           "r": 1,
           "bm": 0,
-          "nm": "Fill 1",
+          "nm": ".bola3Color",
+          "cl": "bola3Color",
           "mn": "ADBE Vector Graphic - Fill",
           "hd": false
         }
@@ -3894,7 +3897,8 @@
           },
           "r": 1,
           "bm": 0,
-          "nm": "Fill 1",
+          "nm": ".bola4Color",
+          "cl": "bola4Color",
           "mn": "ADBE Vector Graphic - Fill",
           "hd": false
         }
@@ -4001,7 +4005,8 @@
           },
           "r": 1,
           "bm": 0,
-          "nm": "Fill 1",
+          "nm": ".bola5Color",
+          "cl": "bola5Color",
           "mn": "ADBE Vector Graphic - Fill",
           "hd": false
         }

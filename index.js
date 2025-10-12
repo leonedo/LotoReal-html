@@ -194,7 +194,7 @@ webcg.on('data', function (data) {
     console.log('data from casparcg received')
     for (var key in data) {
     console.log(key + " = " + data[key]);
-    if (key.includes("color")) {
+    if (key.includes("Color")) {
         checkandcolor(key, data[key]);
     }
     if (key.includes("opacidad")) {
@@ -352,6 +352,33 @@ function itemExists(item) {
 
 
 //casparcg control
+
+webcg.on('entrada1', function () {
+    console.log('bola1')
+    anim.goToAndPlay('bola1', true);
+});
+
+webcg.on('entrada2', function () {
+    console.log('bola2')
+    anim.goToAndPlay('bola2', true);
+});
+
+webcg.on('entrada3', function () {
+    console.log('bola3')
+    anim.goToAndPlay('bola3', true);
+});
+
+webcg.on('entrada4', function () {
+    console.log('bola4')
+    anim.goToAndPlay('bola4', true);
+});
+
+webcg.on('entrada5', function () {
+    console.log('bola5')
+    anim.goToAndPlay('bola5', true);
+});
+
+
 webcg.on('play', function () {
     animPromise.then((resolve) => {
         console.log('play')
@@ -390,6 +417,7 @@ webcg.on('playAnimation', function (animationName) {
     console.log('playAnimation ' + animationName)
     anim.goToAndPlay(animationName, true);
 });
+
 
 webcg.on('update', function () {
     if (!loopExternal) {
