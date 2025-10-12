@@ -4221,7 +4221,7 @@
     },
     {
       "tm": 45,
-      "cm": "name:loop\r\nloopDelay: 50\r\nloopExternal: true",
+      "cm": "name:loop\r\nloopDelay: 1\r\nloopExternal: true",
       "dr": 50
     },
     {
